@@ -1,5 +1,12 @@
 def build_vocabulary():
-    chars = "abcdefghijklmnopabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{}|;:',.<>?/ "
+    # English letters, numbers, symbols + common Hindi (Devanagari) characters
+    chars = (
+        "abcdefghijklmnopabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        "!@#$%^&*()_+-=[]{}|;:',.<>?/ "
+        "ँंःऄअआइईउऊऋॠऌॡएऐओऔकखगघङचछजझञ"
+        "टठडढणतथदधनपफबभमयरलवशषसहऺऻ़ऽािीु"
+        "ूृॄॢॣेैोौ्॒॑॓॔ॕॖॗॠॡॢॣ०१२३४५६७८९"
+    )
     vocab = {char: idx for idx, char in enumerate(chars)}
     inverted_vocab = {idx: char for idx, char in enumerate(chars)}
     return vocab, inverted_vocab
